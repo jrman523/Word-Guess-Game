@@ -1,0 +1,89 @@
+body {
+    background-image: url("/assests/images/prism.png");
+    margin: 0;
+    padding: 0;
+}
+
+.game-heading {
+    position: fixed;
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    left: 45%;
+}
+
+.blue-back-drop {
+    color: #dadada;
+    background-color: #2f2fa2;
+    padding: 20px;
+    margin: 30px 0px 10px 0;
+    box-shadow: 10px 10px 5px #242582;
+    font-size: 30px;
+    text-align: center;
+}
+
+.rot-clock {
+    transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -o-transform: rotate(15deg);
+}
+
+.rot-counter-clock {
+    transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+}
+
+.body-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 20px;
+}
+
+.input-text {
+    position: fixed;
+    width: 30%;
+    height: 50px;
+    left: 37%;
+    top: 20%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    outline: none;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.submit-btn {
+    position: fixed;
+    width: 7%;
+    left: 61%;
+    top: 20%;
+    height: 50px;
+    outline: none;
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    padding: 10px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.submit-btn:hover {
+    background-color: #e7e7e7;
+    cursor: pointer;
+}
