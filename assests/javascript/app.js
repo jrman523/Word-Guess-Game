@@ -59,24 +59,38 @@ function validation(letter) {
     }
 }
 
-document.onkeypress = function(event) {
-    var guessedDiv = document.getElementById("guessed");
-    if (correctWord.includes(event.key)) {
-        validation(event.key);
-    } else {
-        var triesDiv = document.getElementById("tries");
-        if (tries <= 0) {
-            alert("You are out of tries. Better luck next time!");
+document.onkeyup = function(event) {
+    if (event.keyCode >= 65 && event.keyCode <= 90) {
+        var guessedDiv = document.getElementById("guessed");
+        let wordBlankDiv = document.getElementById("wordBlank");
+        if (correctWord.includes(event.key)) {
+            validation(event.key);
         } else {
-            if (!guessedLTR.includes(event.key)) {
-                guessedLTR.push(event.key);
+            var triesDiv = document.getElementById("tries");
+            if (tries <= 0) {
+                alert("You are out of tries. Better luck next time!");
+                wordBlankDiv.innerHTML = "";
+                randomize();
+                correctGuess = [];
+                var winsDiv = document.getElementById("wins");
+                wins++;
+                winsDiv.innerHTML = wins;
+                guessedLTR = [];
+                var guessedDiv = document.getElementById("guessed");
                 guessedDiv.innerHTML = guessedLTR;
-                tries--;
-                triesDiv.innerHTML = tries;
             } else {
-                alert("You have already guessed: " + event.key);
+                if (!guessedLTR.includes(event.key)) {
+                    guessedLTR.push(event.key);
+                    guessedDiv.innerHTML = guessedLTR;
+                    tries--;
+                    triesDiv.innerHTML = tries;
+                } else {
+                    alert("You have already guessed: " + event.key);
+                }
             }
         }
+    } else {
+        alert('please press a letter');
     }
 }
 
