@@ -76,7 +76,6 @@ document.onkeyup = function(event) {
                 wins++;
                 winsDiv.innerHTML = wins;
                 guessedLTR = [];
-                var guessedDiv = document.getElementById("guessed");
                 guessedDiv.innerHTML = guessedLTR;
             } else {
                 if (!guessedLTR.includes(event.key)) {
