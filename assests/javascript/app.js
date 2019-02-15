@@ -73,7 +73,6 @@ document.onkeyup = function(event) {
                 randomize();
                 correctGuess = [];
                 var winsDiv = document.getElementById("wins");
-                wins++;
                 winsDiv.innerHTML = wins;
                 guessedLTR = [];
                 guessedDiv.innerHTML = guessedLTR;
